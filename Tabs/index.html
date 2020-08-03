@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<title>Tab UI</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="tab">
+		<div class="navi">
+			<em class="active">用户管理</em>
+			<em>配置管理</em>
+			<em>角色管理</em>
+			<em>定时任务补偿</em>
+			<span class="line"></span>
+		</div>
+		<div class="panl">
+			<div class="active">用户管理</div>
+			<div>配置管理</div>
+			<div>角色管理</div>
+			<div>定时任务补偿</div>
+		</div>
+	</div>
+
+	<!-- script -->
+	<script src="js/index.js"></script>
+	<script>
+		new Tab ({
+			el: '.tab',
+			navi: '.navi > em',
+			panl: '.panl > div'
+		}).init('.line')
+	</script>
+</body>
+</html>

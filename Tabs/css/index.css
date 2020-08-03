@@ -1,0 +1,86 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+
+	/* 去掉浏览器默认样式 */
+	-webkit-appearance: none;
+	/* 去掉 safari 中的点击阴影 */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	font: 14px/1.5 Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+	color: #303133;
+
+	-webkit-font-smoothing: antialiased;
+	/* 关闭 safari 自动调整字体大小 */
+	-webkit-text-size-adjust: 100%;
+}
+em {
+	font-style: initial;
+}
+
+
+
+/* tab */
+.tab {
+	margin: 12% 0 0;
+	width: 600px;
+}
+
+/* navi */
+.navi {
+	position: relative;
+	display: flex;
+	line-height: 40px;
+}
+/*navi items*/
+.navi > em {
+	font-weight: 500;
+	cursor: pointer;
+}
+.navi > em + em {
+	margin: 0 0 0 40px;
+}
+/*item active*/
+.navi > .active {
+	color: #409eff;
+}
+/*line*/
+.navi > .line {
+	background-color: #409eff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	z-index: 1;
+
+	transition: transform .3s;
+}
+.navi::after {
+	background-color: #e4e7ed;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 2px;
+}
+
+/* panl */
+.panl {
+	margin: 20px 0 0;
+	min-height: 240px;
+}
+.panl > div {
+	display: none;
+}
+/*panl active*/
+.panl > .active {
+	display: block;
+}
